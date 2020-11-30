@@ -11,7 +11,7 @@ class Processo : public Hospedeiro
         virtual ~Processo();
         virtual int getEndereco();
         virtual int getPorta();
-        virtual void receber(int origem, Segmento* mensagem);
+        virtual void receber(int origem, Segmento* mensagem) = 0;
         virtual void imprimir();
         static void setTtlPadrao(int padrao);
         static int getTtlPadrao();

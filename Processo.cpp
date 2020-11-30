@@ -25,10 +25,10 @@ int Processo::getPorta()
     return this->porta;
 }
 
-void Processo::receber(int origem, Segmento* mensagem)
+/*void Processo::receber(int origem, Segmento* mensagem)
 {
 
-}
+}*/
 
 void Processo::imprimir()
 {
