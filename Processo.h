@@ -2,8 +2,9 @@
 #define PROCESSO_H
 
 #include "Roteador.h"
+#include "Hospedeiro.h"
 
-class Processo
+class Processo : public Hospedeiro
 {
     public:
         Processo(int endereco, int porta, Roteador* gateway);
@@ -17,6 +18,9 @@ class Processo
     protected:
 
     private:
+        int endereco, porta, origem, padrao;
+        Roteador* gateway;
+        Segmento* mensagem;
 };
 
 #endif // PROCESSO_H

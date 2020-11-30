@@ -2,6 +2,8 @@
 #include <stdexcept>
 #include <iostream>
 
+using namespace std;
+
 Fila::Fila(int tamanho)
 {
     this->cabeca = 0;
