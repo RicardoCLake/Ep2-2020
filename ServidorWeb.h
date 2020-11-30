@@ -1,6 +1,7 @@
 #ifndef SERVIDORWEB_H
 #define SERVIDORWEB_H
 
+#include "Roteador.h"
 
 class ServidorWeb
 {

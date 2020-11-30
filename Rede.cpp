@@ -20,7 +20,7 @@ No* Rede::getNo(int endereco)
 
 }
 
-list* Rede::getHospedeiros()
+list<Hospedeiro*>* Rede::getHospedeiros()
 {
 
 }

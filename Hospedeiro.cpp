@@ -26,7 +26,7 @@ Processo* Hospedeiro::getProcesso(int porta)
 
 }
 
-vector* Hospedeiro::getProcessos()
+vector<Processo*>* Hospedeiro::getProcessos()
 {
 
 }

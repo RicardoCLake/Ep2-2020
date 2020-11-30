@@ -1,6 +1,9 @@
 #ifndef REDE_H
 #define REDE_H
 
+#include "No.h"
+#include <list>
+#include "Hospedeiro.h"
 
 class Rede
 {

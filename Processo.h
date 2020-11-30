@@ -1,6 +1,7 @@
 #ifndef PROCESSO_H
 #define PROCESSO_H
 
+#include "Roteador.h"
 
 class Processo
 {

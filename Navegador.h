@@ -1,6 +1,7 @@
 #ifndef NAVEGADOR_H
 #define NAVEGADOR_H
 
+#include "Roteador.h"
 
 class Navegador
 {

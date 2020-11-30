@@ -1,6 +1,7 @@
 #ifndef FILA_H
 #define FILA_H
 
+#include "Datagrama.h"
 
 class Fila
 {

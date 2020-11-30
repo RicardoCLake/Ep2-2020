@@ -1,6 +1,7 @@
 #ifndef DATAGRAMA_H
 #define DATAGRAMA_H
 
+#include "Segmento.h"
 
 class Datagrama
 {

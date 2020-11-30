@@ -1,6 +1,7 @@
 #ifndef ROTEADOR_H
 #define ROTEADOR_H
 
+#include "TabelaDeRepasse.h"
 
 class Roteador
 {

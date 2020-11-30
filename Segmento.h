@@ -1,6 +1,8 @@
 #ifndef SEGMENTO_H
 #define SEGMENTO_H
 
+#include "string"
+using namespace std;
 
 class Segmento
 {
@@ -15,6 +17,8 @@ class Segmento
     protected:
 
     private:
+        int portaDeOrigem, portaDeDestino;
+        string dado;
 };
 
 #endif // SEGMENTO_H

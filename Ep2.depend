@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1606684278 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.cpp
+	"Datagrama.h"
+
+1606737107 /home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.h
+	"Segmento.h"
+
+1606737218 /home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.h
+	"string"
+
+1606684562 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
+	"Fila.h"
+
+1606737242 /home/rifi/Documentos/pcs3111/Ep2-2020/Fila.h
+	"Datagrama.h"
+
+1606737459 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.cpp
+	"Hospedeiro.h"
+
+1606737520 /home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.h
+	"Roteador.h"
+	"Processo.h"
+	<vector>
+
+1606737275 /home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.h
+	"TabelaDeRepasse.h"
+
+1606737295 /home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.h
+	"No.h"
+
+1606737318 /home/rifi/Documentos/pcs3111/Ep2-2020/No.h
+	"Fila.h"
+
+1606737794 /home/rifi/Documentos/pcs3111/Ep2-2020/Processo.h
+	"Roteador.h"
+
+1606737755 source:/home/rifi/Documentos/pcs3111/Ep2-2020/main.cpp
+	<iostream>
+
+1606685287 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.cpp
+	"Navegador.h"
+
+1606737790 /home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.h
+	"Roteador.h"
+
+1606685175 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Processo.cpp
+	"Processo.h"
+
+1606737865 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Rede.cpp
+	"Rede.h"
+
+1606737849 /home/rifi/Documentos/pcs3111/Ep2-2020/Rede.h
+	"No.h"
+	<list>
+	"Hospedeiro.h"
+
+1606685054 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.cpp
+	"Roteador.h"
+
+1606737079 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.cpp
+	"Segmento.h"
+	<iostream>
+
