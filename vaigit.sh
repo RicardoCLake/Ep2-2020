@@ -5,9 +5,11 @@ if [ $# -lt 1 ]; then
    git add .
    git commit -m "Commit normal"
    git push
+   exit 0;
 fi
-
-git add .
-git commit -m "commitakedando"
-git push
-
+case $1 in
+   *)
+   git add .
+   git commit -m "$1"
+   git push
+esac
