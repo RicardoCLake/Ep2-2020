@@ -12,6 +12,7 @@ Processo::Processo(int endereco, int porta, Roteador* gateway) :
 
 Processo::~Processo()
 {
+    
 }
 
 int Processo::getEndereco()
