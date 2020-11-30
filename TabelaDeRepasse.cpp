@@ -68,7 +68,8 @@ No* TabelaDeRepasse::getDestino(int endereco)
 void TabelaDeRepasse::imprimir()
 {
     cout << "Ha " << numeroDeEnderecos << " enderecos" << endl;
-    for (int i = 0; i < numeroDeEnderecos; i++) {
+    for (int i = 0; i < numeroDeEnderecos; i++)
+    {
         cout << "Endereco: " << enderecos[i] << " - No: ";
         adjacentes[i]->imprimir();
     }
