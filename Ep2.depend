@@ -1,17 +1,20 @@
 # depslib dependency file v1.0
-1606684278 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.cpp
+1606739243 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.cpp
 	"Datagrama.h"
+	<iostream>
 
-1606737107 /home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.h
+1606738397 /home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.h
 	"Segmento.h"
 
 1606737218 /home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.h
 	"string"
 
-1606684562 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
+1606741665 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
 	"Fila.h"
+	<stdexcept>
+	<iostream>
 
-1606737242 /home/rifi/Documentos/pcs3111/Ep2-2020/Fila.h
+1606739500 /home/rifi/Documentos/pcs3111/Ep2-2020/Fila.h
 	"Datagrama.h"
 
 1606737459 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.cpp
@@ -60,4 +63,13 @@
 1606737079 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.cpp
 	"Segmento.h"
 	<iostream>
+
+1606685352 source:/home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.cpp
+	"ServidorWeb.h"
+
+1606737887 /home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.h
+	"Roteador.h"
+
+1606684803 source:/home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.cpp
+	"TabelaDeRepasse.h"
 

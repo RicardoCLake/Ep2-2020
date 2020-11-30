@@ -19,6 +19,8 @@ class Datagrama
     protected:
 
     private:
+        int origem, destino, ttl;
+        Segmento* dado;
 };
 
 #endif // DATAGRAMA_H

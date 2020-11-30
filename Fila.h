@@ -14,6 +14,11 @@ class Fila
         virtual void imprimir();
 
     protected:
+        int cabeca;
+        int calda;
+        int numeroDeElementos;
+        int tamanho;
+        Datagrama** vetor;
 
     private:
 };
