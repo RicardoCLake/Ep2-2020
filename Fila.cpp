@@ -31,7 +31,6 @@ Datagrama* Fila::dequeue()
     if (numeroDeElementos == 0)
     {
         throw new underflow_error ("Fila vazia: nao rola tirar datagrama");
-        return NULL;
     } else
     {
         numeroDeElementos--;

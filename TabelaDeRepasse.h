@@ -15,9 +15,14 @@ class TabelaDeRepasse
         virtual No* getDestino(int endereco);
         virtual void imprimir();
         static const int MAXIMO_TABELA = 5;
+
     protected:
 
     private:
+        int numeroDeEnderecos;
+        No* padrao;
+        int* enderecos;
+        No** adjacentes;
 };
 
 #endif // TABELADEREPASSE_H

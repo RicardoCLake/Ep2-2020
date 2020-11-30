@@ -9,7 +9,7 @@
 1606737218 /home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.h
 	"string"
 
-1606741665 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
+1606745050 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
 	"Fila.h"
 	<stdexcept>
 	<iostream>
@@ -28,7 +28,7 @@
 1606737275 /home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.h
 	"TabelaDeRepasse.h"
 
-1606737295 /home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.h
+1606743571 /home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.h
 	"No.h"
 
 1606737318 /home/rifi/Documentos/pcs3111/Ep2-2020/No.h
