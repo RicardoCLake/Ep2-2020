@@ -23,8 +23,9 @@ void Navegador::abrir(int endereco, int porta)
 {
     Segmento* seg = new Segmento(this->porta, porta, "GET");
     Datagrama* dat = new Datagrama(this->endereco, endereco, Processo::getTtlPadrao(), seg);
-    this->gateway->receber(dat);
     this->conteudo = "";
+    this->gateway->receber(dat);
+    
 }
 
 void Navegador::abrir(int endereco)
