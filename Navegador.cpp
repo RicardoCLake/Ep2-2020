@@ -3,30 +3,36 @@
 Navegador::Navegador(int endereco, int porta, Roteador* gateway) : 
     Processo(endereco, porta, gateway)
 {
-
+    this->conteudo = "";
 }
 
 Navegador::~Navegador()
 {
-
 }
 
-void Navegador::receber(int origem, Segmento* gateway)
+void Navegador::receber(int origem, Segmento* mensagem)
 {
-
+    if (this->conteudo == "")
+    {
+        this->conteudo = mensagem->getDado();
+    }
+    
 }
 
 void Navegador::abrir(int endereco, int porta)
 {
-    dat = new Datagrama(this->endereco, this->porta, this->getTtlPadrao(), )
+    Segmento* seg = new Segmento(this->porta, porta, "GET");
+    Datagrama* dat = new Datagrama(this->endereco, endereco, Processo::getTtlPadrao(), seg);
+    this->gateway->receber(dat);
+    this->conteudo = "";
 }
 
 void Navegador::abrir(int endereco)
 {
-
+    this->abrir(endereco, 80);
 }
 
 string Navegador::getConteudo()
 {
-
+    return this->conteudo;
 }

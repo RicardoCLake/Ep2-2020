@@ -42,6 +42,8 @@
 		<Unit filename="Hospedeiro.h" />
 		<Unit filename="Navegador.cpp" />
 		<Unit filename="Navegador.h" />
+		<Unit filename="No.cpp" />
+		<Unit filename="No.h" />
 		<Unit filename="Processo.cpp" />
 		<Unit filename="Processo.h" />
 		<Unit filename="Rede.cpp" />

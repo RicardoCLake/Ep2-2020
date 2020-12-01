@@ -1,18 +1,16 @@
 #include "Processo.h"
-#include <iostream>
 
-using namespace std;
+int Processo::TTLPadrao = 5;
 
-Processo::Processo(int endereco, int porta, Roteador* gateway) : 
-    Hospedeiro (endereco, gateway)
+Processo::Processo(int endereco, int porta, Roteador* gateway)
 {
+    this->endereco = endereco;
+    this->gateway = gateway;
     this->porta = porta;
-    this->padrao = 5;
 }
 
 Processo::~Processo()
 {
-    
 }
 
 int Processo::getEndereco()
@@ -39,10 +37,10 @@ void Processo::imprimir()
 
 void Processo::setTtlPadrao(int padrao)
 {
-    this->padrao = padrao;
+    Processo::TTLPadrao = padrao;
 }
 
 int Processo::getTtlPadrao()
 {
-    return this->padrao;
+    return Processo::TTLPadrao;
 }

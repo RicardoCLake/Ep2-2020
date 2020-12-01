@@ -3,6 +3,9 @@
 
 #include "Roteador.h"
 #include "Processo.h"
+#include "Datagrama.h"
+#include "Segmento.h"
+#include <string>
 
 class Navegador : public Processo
 {
@@ -12,17 +15,14 @@ class Navegador : public Processo
 
         virtual void abrir(int endereco, int porta);
         virtual void abrir(int endereco);
-
+        virtual void receber(int origem, Segmento* mensagem);
         virtual string getConteudo();
 
     protected:
 
     private:
-        int endereco, porta;
-        Roteador* gateway;
+        string conteudo;
 
-        Datagrama* dat;
-        Segmento* seg;
 };
 
 #endif // NAVEGADOR_H

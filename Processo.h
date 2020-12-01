@@ -2,9 +2,13 @@
 #define PROCESSO_H
 
 #include "Roteador.h"
-#include "Hospedeiro.h"
+#include "Segmento.h"
+#include <iostream>
 
-class Processo : public Hospedeiro
+using namespace std;
+
+
+class Processo
 {
     public:
         Processo(int endereco, int porta, Roteador* gateway);
@@ -15,12 +19,12 @@ class Processo : public Hospedeiro
         virtual void imprimir();
         static void setTtlPadrao(int padrao);
         static int getTtlPadrao();
-    protected:
 
-    private:
-        int endereco, porta, origem, padrao;
+    protected:
         Roteador* gateway;
-        Segmento* mensagem;
+        int endereco, porta;
+        static int TTLPadrao;
+    private:
 };
 
 #endif // PROCESSO_H

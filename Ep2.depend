@@ -6,10 +6,10 @@
 1606738397 /home/rifi/Documentos/pcs3111/Ep2-2020/Datagrama.h
 	"Segmento.h"
 
-1606737218 /home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.h
-	"string"
+1606783930 /home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.h
+	<string>
 
-1606745050 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
+1606781140 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Fila.cpp
 	"Fila.h"
 	<stdexcept>
 	<iostream>
@@ -25,7 +25,8 @@
 	"Processo.h"
 	<vector>
 
-1606737275 /home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.h
+1606750221 /home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.h
+	"No.h"
 	"TabelaDeRepasse.h"
 
 1606743571 /home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.h
@@ -34,20 +35,27 @@
 1606748087 /home/rifi/Documentos/pcs3111/Ep2-2020/No.h
 	"Fila.h"
 
-1606737794 /home/rifi/Documentos/pcs3111/Ep2-2020/Processo.h
+1606786744 /home/rifi/Documentos/pcs3111/Ep2-2020/Processo.h
 	"Roteador.h"
+	"Segmento.h"
+	<iostream>
 
 1606737755 source:/home/rifi/Documentos/pcs3111/Ep2-2020/main.cpp
 	<iostream>
 
-1606685287 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.cpp
+1606786086 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.cpp
 	"Navegador.h"
 
-1606737790 /home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.h
+1606785031 /home/rifi/Documentos/pcs3111/Ep2-2020/Navegador.h
 	"Roteador.h"
-
-1606685175 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Processo.cpp
 	"Processo.h"
+	"Datagrama.h"
+	"Segmento.h"
+	<string>
+
+1606786268 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Processo.cpp
+	"Processo.h"
+	<iostream>
 
 1606737865 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Rede.cpp
 	"Rede.h"
@@ -57,7 +65,7 @@
 	<list>
 	"Hospedeiro.h"
 
-1606685054 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.cpp
+1606750933 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.cpp
 	"Roteador.h"
 
 1606737079 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Segmento.cpp
@@ -70,6 +78,12 @@
 1606737887 /home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.h
 	"Roteador.h"
 
-1606684803 source:/home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.cpp
+1606745765 source:/home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.cpp
 	"TabelaDeRepasse.h"
+	<stdexcept>
+	<iostream>
+
+1606749458 source:/home/rifi/Documentos/pcs3111/Ep2-2020/No.cpp
+	"No.h"
+	<iostream>
 
