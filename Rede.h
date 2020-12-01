@@ -19,6 +19,9 @@ class Rede
     protected:
 
     private:
+        No** nos;
+        const int maximoDeNos = 20;
+        int quantidadeDeNos;
 };
 
 #endif // REDE_H

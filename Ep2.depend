@@ -20,9 +20,10 @@
 1606737459 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.cpp
 	"Hospedeiro.h"
 
-1606737520 /home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.h
+1606842561 /home/rifi/Documentos/pcs3111/Ep2-2020/Hospedeiro.h
 	"Roteador.h"
 	"Processo.h"
+	"No.h"
 	<vector>
 
 1606750221 /home/rifi/Documentos/pcs3111/Ep2-2020/Roteador.h
@@ -35,7 +36,7 @@
 1606748087 /home/rifi/Documentos/pcs3111/Ep2-2020/No.h
 	"Fila.h"
 
-1606786744 /home/rifi/Documentos/pcs3111/Ep2-2020/Processo.h
+1606831769 /home/rifi/Documentos/pcs3111/Ep2-2020/Processo.h
 	"Roteador.h"
 	"Segmento.h"
 	<iostream>
@@ -53,9 +54,8 @@
 	"Segmento.h"
 	<string>
 
-1606786268 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Processo.cpp
+1606786847 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Processo.cpp
 	"Processo.h"
-	<iostream>
 
 1606737865 source:/home/rifi/Documentos/pcs3111/Ep2-2020/Rede.cpp
 	"Rede.h"
@@ -72,11 +72,13 @@
 	"Segmento.h"
 	<iostream>
 
-1606685352 source:/home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.cpp
+1606788133 source:/home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.cpp
 	"ServidorWeb.h"
 
-1606737887 /home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.h
+1606833566 /home/rifi/Documentos/pcs3111/Ep2-2020/ServidorWeb.h
 	"Roteador.h"
+	"Processo.h"
+	<string>
 
 1606745765 source:/home/rifi/Documentos/pcs3111/Ep2-2020/TabelaDeRepasse.cpp
 	"TabelaDeRepasse.h"
