@@ -67,4 +67,8 @@ void Hospedeiro::processar()
     }
     pro->receber(seg->getPortaDeOrigem(), seg);
     delete dat;
+
+    // impressao
+
+    cout << "Hospedeiro " << this->getEndereco() << endl;
 }
