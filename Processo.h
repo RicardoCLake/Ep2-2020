@@ -16,7 +16,7 @@ class Processo
         virtual int getEndereco();
         virtual int getPorta();
         virtual void receber(int origem, Segmento* mensagem) = 0;
-        virtual void imprimir();
+        virtual void imprimir() = 0;
         static void setTtlPadrao(int padrao);
         static int getTtlPadrao();
 

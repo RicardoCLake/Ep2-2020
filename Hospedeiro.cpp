@@ -2,7 +2,6 @@
 #include "ServidorWeb.h"
 #include "Navegador.h"
 
-
 Hospedeiro::Hospedeiro(int endereco, Roteador* gateway) :
     No(endereco)
 {
@@ -71,4 +70,12 @@ void Hospedeiro::processar()
     // impressao
 
     cout << "Hospedeiro " << this->getEndereco() << endl;
+    for (int i = 0; i < processos->size(); i++)
+    {
+        cout << "\t";
+        pro->imprimir();
+    }
+
+    // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
+    // e se a porta do hospedeiro nao tem navegador
 }

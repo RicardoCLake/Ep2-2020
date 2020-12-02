@@ -11,6 +11,7 @@ class ServidorWeb : public Processo
         ServidorWeb(int endereco, int porta, Roteador* gateway, string conteudo);
         virtual ~ServidorWeb();
         virtual void receber(int origem, Segmento* mensagem);
+        void imprimir();
     protected:
 
     private:

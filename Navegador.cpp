@@ -37,3 +37,8 @@ string Navegador::getConteudo()
 {
     return this->conteudo;
 }
+
+void Navegador::imprimir()
+{
+    cout << "ServidorWeb " << this->getPorta() << endl;
+}

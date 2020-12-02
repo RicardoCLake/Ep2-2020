@@ -28,13 +28,6 @@ int Processo::getPorta()
 
 }*/
 
-void Processo::imprimir()
-{
-    cout << "\tInformacoes do Processo: " << endl;
-    cout << "Endereco: " << this->getEndereco() << endl;
-    cout << "Porta: " << this->getPorta() << endl;
-}
-
 void Processo::setTtlPadrao(int padrao)
 {
     Processo::TTLPadrao = padrao;

@@ -18,3 +18,7 @@ void ServidorWeb::receber(int origem, Segmento* mensagem)
     this->gateway->receber(dat);
 }
 
+void ServidorWeb::imprimir()
+{
+    cout << "Navegador " << this->getPorta() << endl;
+}

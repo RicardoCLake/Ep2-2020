@@ -18,6 +18,8 @@ class Navegador : public Processo
         virtual void receber(int origem, Segmento* mensagem);
         virtual string getConteudo();
 
+        void imprimir();
+
     protected:
 
     private:
