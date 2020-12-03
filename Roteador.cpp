@@ -37,25 +37,32 @@ void Roteador::processar()
             << ", " << dat->getDado() << endl;
 
         delete dat;
-    } else if (dat->getDestino() == this->endereco) {
+    } 
+    else if (dat->getDestino() == this->endereco) 
+    {
         cout << "\tRecebido: " << dat->getDado() << " " <<
             "Origem: " << dat->getOrigem()
             << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
             << ", " << dat->getDado() << endl;
         delete dat;
-    } else if (no != NULL) {
-        cout << "\tEnviado para " << this->getEndereco() << " " <<
+    } 
+    else if (no != NULL) 
+    {
+        cout << "\tEnviado para " << no->getEndereco() << " " <<
             "Origem: " << dat->getOrigem()
             << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
-            << ", " << dat->getDado() << endl;
+            << ", " << dat->getDado()->getDado() << endl;
         no->receber(dat);
-    } else if(no == NULL) {
+    } 
+    else if(no == NULL) 
+    {
         cout << "\tSemProximo: Origem: " << dat->getOrigem()
             << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
             << ", " << dat->getDado() << endl;
-    }
-    
-    else
+    } 
+    else 
+    {
         delete dat;
+    }
 }
 

@@ -66,9 +66,11 @@ void Hospedeiro::processar()
     Processo* pro = getProcesso(seg->getPortaDeDestino());
     if(pro == NULL)
     {
+        cout << "Sem destino: " << dat->imprimir(); 
         delete dat;
         return;
     }
     pro->receber(seg->getPortaDeOrigem(), seg);
     delete dat;
+
 }

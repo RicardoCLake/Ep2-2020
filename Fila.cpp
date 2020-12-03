@@ -4,7 +4,8 @@
 
 using namespace std;
 
-Fila::Fila(int tamanho)
+Fila::Fila(int tamanho) :
+tamanho(tamanho)
 {
     this->cabeca = 0;
     this->calda = 0;

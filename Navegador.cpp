@@ -12,11 +12,16 @@ Navegador::~Navegador()
 
 void Navegador::receber(int origem, Segmento* mensagem)
 {
+    cout << "Navegador " << this->getPorta() << endl;
+    
     if (this->conteudo == "")
     {
         this->conteudo = mensagem->getDado();
-    }
-    
+        cout << "\tRecebido de " << origem << ":" << mensagem->getPortaDeOrigem() << ": " << mensagem->getDado() << endl;
+    } else 
+    {
+        cout << "\tMensagem ignorada " << origem << ":" << mensagem->getPortaDeOrigem() << ": " << mensagem->getDado() << endl;
+    }      
 }
 
 void Navegador::abrir(int endereco, int porta)

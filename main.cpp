@@ -44,9 +44,6 @@ void opcao1(Rede* rede)
     list<Hospedeiro*>* listaHospedeiros = rede->getHospedeiros();
     list<Hospedeiro*>::iterator i = listaHospedeiros->begin();
 
-    // como e onde usar os metodos adicionarNavegador() e adicionarServidorWeb()?
-    // No fim dessa funcao
-
     while(i != listaHospedeiros->end())
     {
         
@@ -62,25 +59,31 @@ void opcao1(Rede* rede)
         i++;
     }
 
-    int addrsHosp, portaNavegador, addrsPagina, portaServidor;
+    int addrsHosp, portaNavegador, addrsServidor, portaServidor;
     cout << "Digite o endereco do hospedeiro: ";
     cin >> addrsHosp;
 
     Hospedeiro* hosp;
-    if (hosp = dynamic_cast<Hospedeiro*>rede->getNo(addrsHosp));
+    if ((hosp = dynamic_cast<Hospedeiro*>(rede->getNo(addrsHosp))) == NULL)
+    {
+        cout << "Endereco invalido" << endl;
+        return;
+    }
     cout << "Digite a porta do navegador: ";
     cin >> portaNavegador;
+    Navegador* nav;
+    if ((nav = dynamic_cast<Navegador*> (hosp->getProcesso(portaNavegador))) == NULL)
+    {
+        cout << "Porta invalida" << endl;
+        return;
+    }
+
     cout << "Abrir a pagina no endereco: ";
-    cin >> addrsPagina:
-    cout << "Porta do Servidor Web";
+    cin >> addrsServidor;
+    cout << "Porta do Servidor Web: ";
     cin >> portaServidor;
 
-
-
-
-
-    // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
-    // e se a porta do hospedeiro nao tem navegador
+    nav->abrir(addrsServidor, portaServidor);
 
     return;
 }
@@ -102,7 +105,11 @@ void opcao2(Rede* rede)
 
 void opcao3()
 {
+    cout << "Novo TTL: ";
+    int ttl;
+    cin >> ttl;
 
+    Processo::setTtlPadrao(ttl)
 }
 
 int main()
