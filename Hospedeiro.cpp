@@ -63,14 +63,16 @@ void Hospedeiro::processar()
     Datagrama* dat = this->fila->dequeue();
     Segmento* seg = dat->getDado();
 
+    cout << "Hospedeiro " << this->endereco << endl;
+
     Processo* pro = getProcesso(seg->getPortaDeDestino());
     if(pro == NULL)
     {
-        cout << "Sem destino: " << dat->imprimir(); 
+        cout << "Sem destino: ";
+        dat->imprimir(); 
         delete dat;
         return;
     }
-    pro->receber(seg->getPortaDeOrigem(), seg);
+    pro->receber(dat->getOrigem(), seg);
     delete dat;
-
 }

@@ -60,7 +60,7 @@ void opcao1(Rede* rede)
     }
 
     int addrsHosp, portaNavegador, addrsServidor, portaServidor;
-    cout << "Digite o endereco do hospedeiro: ";
+    cout << "\nDigite o endereco do hospedeiro: ";
     cin >> addrsHosp;
 
     Hospedeiro* hosp;
@@ -105,11 +105,13 @@ void opcao2(Rede* rede)
 
 void opcao3()
 {
+    cout << "TTL atual: " << Processo::getTtlPadrao() << endl;
+    
     cout << "Novo TTL: ";
     int ttl;
     cin >> ttl;
 
-    Processo::setTtlPadrao(ttl)
+    Processo::setTtlPadrao(ttl);
 }
 
 int main()
@@ -132,21 +134,23 @@ int main()
         if(opcao == 0)
         {
             opcao = inicio();
-            cout << endl;
         }
         else if(opcao == 1)
         {
+            cout << endl;
             opcao1(rede);
             opcao = 0;
             cout << endl;
 
         }else if(opcao == 2)
         {
+            cout << endl;
             opcao2(rede);
             opcao = 0;
             cout << endl;
         }else if(opcao == 3)
         {
+            cout << endl;
             opcao3();
             opcao = 0;
             cout << endl;

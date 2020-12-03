@@ -32,33 +32,27 @@ void Roteador::processar()
 
     if (dat->getTtl() <= 0)
     {
-        cout << "\tDestruido por TTL: Origem: " << dat->getOrigem()
-            << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
-            << ", " << dat->getDado() << endl;
+        cout << "\tDestruido por TTL: ";
+        dat->imprimir();
 
         delete dat;
     } 
     else if (dat->getDestino() == this->endereco) 
     {
-        cout << "\tRecebido: " << dat->getDado() << " " <<
-            "Origem: " << dat->getOrigem()
-            << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
-            << ", " << dat->getDado() << endl;
+        cout << "\tRecebido: ";
+        dat->imprimir();
         delete dat;
     } 
     else if (no != NULL) 
     {
-        cout << "\tEnviado para " << no->getEndereco() << " " <<
-            "Origem: " << dat->getOrigem()
-            << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
-            << ", " << dat->getDado()->getDado() << endl;
+        cout << "\tEnviado para " << no->getEndereco() << ": ";
+        dat->imprimir();
         no->receber(dat);
     } 
     else if(no == NULL) 
     {
-        cout << "\tSemProximo: Origem: " << dat->getOrigem()
-            << ", Destino: " << dat->getDestino() << ", TTL: " << dat->getTtl()
-            << ", " << dat->getDado() << endl;
+        cout << "\tSemProximo: ";
+        dat->imprimir();
     } 
     else 
     {

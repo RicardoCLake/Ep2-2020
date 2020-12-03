@@ -31,6 +31,5 @@ string Segmento::getDado()
 
 void Segmento::imprimir()
 {
-    cout << "Origem: " << portaDeOrigem << "; Destino: " << portaDeDestino << endl;
-    cout << "Dado: " << dado << endl;
+    cout << this->dado << endl;
 }
