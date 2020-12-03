@@ -55,7 +55,12 @@ vector<Processo*>* Hospedeiro::getProcessos()
 
 void Hospedeiro::processar()
 {
-    Datagrama* dat = this->fila->dequeue(); // ta dando underflow aqui
+    if (fila->isEmpty())
+    {
+        return;
+    }
+    
+    Datagrama* dat = this->fila->dequeue();
     Segmento* seg = dat->getDado();
 
     Processo* pro = getProcesso(seg->getPortaDeDestino());
