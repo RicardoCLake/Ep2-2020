@@ -14,12 +14,14 @@
 #include <fstream>
 #include <string>
 #include <list>
+#include <vector>
 #include <iostream>
 
 using namespace std;
 
-int inicio(int op)
+int inicio()
 {
+    int op;
     cout << "Simulador de Rede" << endl;
     cout << "---" << endl;
     cout << "1) Usar um navegador" << endl;
@@ -30,22 +32,26 @@ int inicio(int op)
 
     cin >> op;
 
+    //cout << endl;
+    //cout << "opcao = " << op <<  endl;
+    //cout << endl;
+
     return op;
 }
 
 void opcao1(Rede* rede)
 {
-    list<Hospedeiro*>* lista_hospedeiros = rede->getHospedeiros();
-    list<Hospedeiro*>::iterator i = lista_hospedeiros->begin();
+    list<Hospedeiro*>* listaHospedeiros = rede->getHospedeiros();
+    list<Hospedeiro*>::iterator i = listaHospedeiros->begin();
 
     // como e onde usar os metodos adicionarNavegador() e adicionarServidorWeb()?
+    // No fim dessa funcao
 
-   /* while(i != lista_hospedeiros->end())
+    while(i != listaHospedeiros->end())
     {
-        (*i)->processar();
+        
+        cout << "Hospedeiro " << (*i)->getEndereco() << endl;
         vector<Processo*>* processos = (*i)->getProcessos();
-
-        cout << "loop" << endl;
 
         for (unsigned int j = 0; j < processos->size(); j++)
         {
@@ -54,7 +60,27 @@ void opcao1(Rede* rede)
         }
 
         i++;
-    }*/
+    }
+
+    int addrsHosp, portaNavegador, addrsPagina, portaServidor;
+    cout << "Digite o endereco do hospedeiro: ";
+    cin >> addrsHosp;
+
+    Hospedeiro* hosp;
+    if (hosp = dynamic_cast<Hospedeiro*>rede->getNo(addrsHosp));
+    cout << "Digite a porta do navegador: ";
+    cin >> portaNavegador;
+    cout << "Abrir a pagina no endereco: ";
+    cin >> addrsPagina:
+    cout << "Porta do Servidor Web";
+    cin >> portaServidor;
+
+
+
+
+
+    // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
+    // e se a porta do hospedeiro nao tem navegador
 
     return;
 }
@@ -84,14 +110,13 @@ int main()
     string nomeDoArquivo;
     cout << "Digite o nome do arquivo: ";
     cin >> nomeDoArquivo;
-    cout << endl;
+    cout << endl; //Precisa?
 
     PersistenciaDeRede* p = new PersistenciaDeRede();
-    Rede* rede; // essa linha ta dando Segmentation Fault (core dumped)
+    Rede* rede; 
 
     rede = p->carregar(nomeDoArquivo);
 
-    
 
     int opcao = 0;
 
@@ -99,26 +124,27 @@ int main()
     {
         if(opcao == 0)
         {
-            inicio(opcao);
+            opcao = inicio();
             cout << endl;
         }
         else if(opcao == 1)
         {
             opcao1(rede);
-            inicio(opcao);
+            opcao = 0;
             cout << endl;
+
         }else if(opcao == 2)
         {
             opcao2(rede);
+            opcao = 0;
             cout << endl;
         }else if(opcao == 3)
         {
             opcao3();
+            opcao = 0;
             cout << endl;
         }
-        cout << endl;
-        cout << "opcao = " << opcao <<  endl;
-        cout << endl;
+        
     }
     
     return 0;

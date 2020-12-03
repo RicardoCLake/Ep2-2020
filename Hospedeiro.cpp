@@ -71,17 +71,4 @@ void Hospedeiro::processar()
     }
     pro->receber(seg->getPortaDeOrigem(), seg);
     delete dat;
-
-    // impressao
-
-    if(this->getFila()->isEmpty())
-    {
-        return;
-    }else
-    {
-        cout << "Hospedeiro " << this->getEndereco() << endl;
-        
-        // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
-        // e se a porta do hospedeiro nao tem navegador
-    }
 }
