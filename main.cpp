@@ -19,6 +19,81 @@
 
 using namespace std;
 
+int inicio();
+void opcao1(Rede* rede);
+void opcao2(Rede* rede);
+void opcao3();
+
+int main()
+{
+    string nomeDoArquivo;
+    cout << "Digite o nome do arquivo: ";
+    cin >> nomeDoArquivo;
+    cout << endl; //Precisa?
+
+    PersistenciaDeRede* p = new PersistenciaDeRede();
+    Rede* rede; 
+
+    rede = p->carregar(nomeDoArquivo);
+
+
+    int opcao = 0;
+
+    while(opcao != 4)
+    {
+        if(opcao == 0)
+        {
+            opcao = inicio();
+        }
+        else if(opcao == 1)
+        {
+            cout << endl;
+            try
+            {
+                opcao1(rede);
+            } catch (overflow_error* o)
+            {
+                cout << o->what() << endl;
+                return 1;
+            } catch (invalid_argument* in)
+            {
+                cout << in->what() << endl;
+                return 1;
+            }
+            opcao = 0;
+            cout << endl;
+
+        }else if(opcao == 2)
+        {   
+            
+            cout << endl;
+            try
+            {
+                opcao2(rede);
+            } catch (overflow_error* o)
+            {
+                cout << o->what() << endl;
+                return 1;
+            } catch (underflow_error* u)
+            {
+                cout << u->what() << endl;
+                return 1;
+            }
+            opcao = 0;
+            cout << endl;
+        }else if(opcao == 3)
+        {
+            cout << endl;
+            opcao3();
+            opcao = 0;
+            cout << endl;
+        }
+        
+    }
+    
+    return 0;
+}
+
 int inicio()
 {
     int op;
@@ -114,49 +189,3 @@ void opcao3()
     Processo::setTtlPadrao(ttl);
 }
 
-int main()
-{
-    string nomeDoArquivo;
-    cout << "Digite o nome do arquivo: ";
-    cin >> nomeDoArquivo;
-    cout << endl; //Precisa?
-
-    PersistenciaDeRede* p = new PersistenciaDeRede();
-    Rede* rede; 
-
-    rede = p->carregar(nomeDoArquivo);
-
-
-    int opcao = 0;
-
-    while(opcao != 4)
-    {
-        if(opcao == 0)
-        {
-            opcao = inicio();
-        }
-        else if(opcao == 1)
-        {
-            cout << endl;
-            opcao1(rede);
-            opcao = 0;
-            cout << endl;
-
-        }else if(opcao == 2)
-        {
-            cout << endl;
-            opcao2(rede);
-            opcao = 0;
-            cout << endl;
-        }else if(opcao == 3)
-        {
-            cout << endl;
-            opcao3();
-            opcao = 0;
-            cout << endl;
-        }
-        
-    }
-    
-    return 0;
-}
