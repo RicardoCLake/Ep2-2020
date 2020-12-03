@@ -6,7 +6,6 @@ PersistenciaDeRede::PersistenciaDeRede()
 {
 }
 
-
 PersistenciaDeRede::~PersistenciaDeRede()
 {
 }

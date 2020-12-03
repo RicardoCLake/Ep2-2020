@@ -1,0 +1,136 @@
+Digite o nome do arquivo: e.txt 
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 1
+
+Hospedeiro 4
+        ServidorWeb 1000
+Hospedeiro 5
+        Navegador 1005
+
+Digite o endereco do hospedeiro: 4
+Digite a porta do navegador: 1000
+Abrir a pagina no endereco: 5
+Porta do Servidor Web: 1005
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 1
+
+Hospedeiro 4
+        ServidorWeb 1000
+Hospedeiro 5
+        Navegador 1005
+
+Digite o endereco do hospedeiro: 4
+Digite a porta do navegador: 1000
+Abrir a pagina no endereco: 2
+Porta do Servidor Web: 80
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 3
+
+TTL atual: 5
+Novo TTL: 2
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 1
+
+Hospedeiro 4
+        ServidorWeb 1000
+Hospedeiro 5
+        Navegador 1005
+
+Digite o endereco do hospedeiro: 4
+Digite a porta do navegador: 1000
+Abrir a pagina no endereco: 5
+Porta do Servidor Web: 1005
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 3
+
+TTL atual: 2
+Novo TTL: 5
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 2
+
+Quantidade de tempo: 5
+
+Instante 1
+---
+Roteador 1
+        Enviado para 2: Origem: 4:1000, Destino: 5:1005, TTL: 4, GET
+Roteador 2
+        Enviado para 3: Origem: 4:1000, Destino: 5:1005, TTL: 3, GET
+Roteador 3
+        Enviado para 5: Origem: 4:1000, Destino: 5:1005, TTL: 2, GET
+Hospedeiro 5
+ServidorWeb 1005
+        Devolvendo mensangem para: 4:1000
+
+Instante 2
+---
+Roteador 1
+        Enviado para 2: Origem: 4:1000, Destino: 2:80, TTL: 4, GET
+Roteador 2
+        Recebido: Origem: 4:1000, Destino: 2:80, TTL: 3, GET
+Roteador 3
+        Enviado para 2: Origem: 5:1005, Destino: 4:1000, TTL: 4, site_do_PCS
+
+Instante 3
+---
+Roteador 1
+        Enviado para 2: Origem: 4:1000, Destino: 5:1005, TTL: 1, GET
+Roteador 2
+        Enviado para 1: Origem: 5:1005, Destino: 4:1000, TTL: 3, site_do_PCS
+
+Instante 4
+---
+Roteador 1
+        Enviado para 4: Origem: 5:1005, Destino: 4:1000, TTL: 2, site_do_PCS
+Roteador 2
+        Destruido por TTL: Origem: 4:1000, Destino: 5:1005, TTL: 0, GET
+Hospedeiro 4
+Navegador 1000
+        Recebido de 5:1005: site_do_PCS
+
+Instante 5
+---
+
+Simulador de Rede
+---
+1) Usar um navegador
+2) Passar tempo
+3) Alterar TTL
+4) Sair
+Escolha uma opcao: 4
