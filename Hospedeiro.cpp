@@ -55,7 +55,7 @@ vector<Processo*>* Hospedeiro::getProcessos()
 
 void Hospedeiro::processar()
 {
-    Datagrama* dat = this->fila->dequeue();
+    Datagrama* dat = this->fila->dequeue(); // ta dando underflow aqui
     Segmento* seg = dat->getDado();
 
     Processo* pro = getProcesso(seg->getPortaDeDestino());
@@ -69,13 +69,14 @@ void Hospedeiro::processar()
 
     // impressao
 
-    cout << "Hospedeiro " << this->getEndereco() << endl;
-    for (int i = 0; i < processos->size(); i++)
+    if(this->getFila()->isEmpty())
     {
-        cout << "\t";
-        pro->imprimir();
+        return;
+    }else
+    {
+        cout << "Hospedeiro " << this->getEndereco() << endl;
+        
+        // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
+        // e se a porta do hospedeiro nao tem navegador
     }
-
-    // ainda falta fazer a tratativa se endereco do hospedeiro nao tem hospedeiro
-    // e se a porta do hospedeiro nao tem navegador
 }

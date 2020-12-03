@@ -28,13 +28,31 @@ void opcao1(Rede* rede)
     while(i != lista_hospedeiros->end())
     {
         (*i)->processar();
+        vector<Processo*>* processos = (*i)->getProcessos();
+
+        for (unsigned int i = 0; i < processos->size(); i++)
+        {
+            cout << "\t";
+            processos->at(i)->imprimir();
+        }
+
         i++;
     }
 }
 
 void opcao2(Rede* rede)
 {
-    rede->passarTempo(); // ainda falta verificar o que imprimir em Rede.cpp
+    cout << "Quantidade de tempo: ";
+    int tempo;
+    cin >> tempo;
+
+    for (int i = 1; i <= tempo; i++)
+    {
+        cout << "\nInstante " << i << endl;
+        cout << "---" << endl;
+        
+        rede->passarTempo();
+    }
 }
 
 void opcao3()
@@ -66,26 +84,41 @@ int main()
     cout << endl;
 
     PersistenciaDeRede* p = new PersistenciaDeRede();
-    Rede* rede = p->carregar(nomeDoArquivo);
+    Rede* rede; // essa linha ta dando Segmentation Fault (core dumped)
 
-    int opcao = inicio();
-
-    while(opcao != 4)
+    try
     {
-        if(opcao == 1)
-        {
-            opcao1();
-            cout << endl;
-        }else if(opcao == 2)
-        {
-            opcao2(rede);
-            cout << endl;
-        }else if(opcao == 3)
-        {
-            opcao3();
-            cout << endl;
-        }
-    }
+        rede = p->carregar(nomeDoArquivo);
 
+        int opcao = inicio();
+
+        cout << opcao << endl;
+
+        while(opcao != 4)
+        {
+            if(opcao == 1)
+            {
+                opcao1(rede);
+                cout << endl;
+            }else if(opcao == 2)
+            {
+                opcao2(rede);
+                cout << endl;
+            }else if(opcao == 3)
+            {
+                opcao3();
+                cout << endl;
+            }
+        }
+
+    }
+    catch(invalid_argument& e)
+    {
+        cout << e.what() << endl;
+    }
+    
+    
+
+    
     return 0;
 }

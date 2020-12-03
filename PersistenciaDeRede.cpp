@@ -42,18 +42,20 @@ Rede* PersistenciaDeRede::carregar(string arquivo)
         entrada >> qtdeHospedeiros;
     }
     Hospedeiro** hospedeiros = new Hospedeiro*[qtdeHospedeiros];
-    
+
     int enderecoDoGateway = 0, qtdeProcessos = 0; endereco = 0;
     entrada >> endereco >> enderecoDoGateway >> qtdeProcessos;
+
     for (int i = 0; i < qtdeHospedeiros  && entrada; i++)
     {   
+
         Roteador* gateway = buscarRoteador(roteadores, enderecoDoGateway, qtdeRoteadores);
         hospedeiros[i] = new Hospedeiro(endereco, gateway);
 
         char letra = 0;
         entrada >> letra;
         
-        for (int i = 0; i < qtdeProcessos && entrada; i++)
+        for (int j = 0; j < qtdeProcessos && entrada; j++)
         {
             if (letra == 'w')
             {
@@ -74,19 +76,21 @@ Rede* PersistenciaDeRede::carregar(string arquivo)
                     hospedeiros[i]->adicionarNavegador(porta);
                 }
             }
-            if (i != qtdeProcessos - 1 ) entrada >> letra;
+            if (j != qtdeProcessos - 1 ) entrada >> letra;
         }
         if (i != qtdeHospedeiros - 1) entrada >> endereco >> enderecoDoGateway >> qtdeProcessos;
     }
 
+
     // Leitura das tabelas de repasses
+    int numeroDoRoteador = 0, addrsPadrao = 0, qtdeMapeamentos = 0;
+    if(entrada)
+    {
+        entrada >> numeroDoRoteador >> addrsPadrao >> qtdeMapeamentos;
+    }
+
     while(entrada)
     {
-        int numeroDoRoteador = 0, addrsPadrao = 0, qtdeMapeamentos = 0;
-        if(entrada)
-        {
-            entrada >> numeroDoRoteador >> addrsPadrao >> qtdeMapeamentos;
-        }
         Roteador* rot = buscarRoteador(roteadores, numeroDoRoteador, qtdeRoteadores);
         
         No* padrao = buscarNo(roteadores, hospedeiros, addrsPadrao, qtdeRoteadores, qtdeHospedeiros);
@@ -100,6 +104,8 @@ Rede* PersistenciaDeRede::carregar(string arquivo)
             rot->getTabela()->mapear(addrsDestino, adjacente);
             if (i != qtdeMapeamentos - 1) entrada >> addrsDestino >> addrsAdjacente;
         }
+
+        entrada >> numeroDoRoteador >> addrsPadrao >> qtdeMapeamentos;
     }
     // Terminando a leitura do arquivo
     if (!entrada.eof())

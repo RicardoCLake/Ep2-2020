@@ -3,6 +3,7 @@
 
 #include "No.h"
 #include "TabelaDeRepasse.h"
+#include <iostream>
 
 class Roteador : public No
 {
